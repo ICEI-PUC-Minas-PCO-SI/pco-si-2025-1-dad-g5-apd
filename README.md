@@ -4,7 +4,7 @@
 
 `DISCIPLINA: Desenvolvimento de Aplicações Distribuídas`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Este projeto é uma aplicação de gerenciamento financeiro que permite aos usuários controlar suas despesas e receitas de maneira prática e eficiente. A plataforma oferece funcionalidades como cadastro e autenticação de usuários, gerenciamento de transações (despesas e receitas), categorização detalhada das transações e a geração de relatórios financeiros personalizados, permitindo o acompanhamento customizado das finanças.
 
 ## Integrantes
 
