@@ -1,6 +1,6 @@
 # Cash Control
 
-`CURSO: Análise e Desenvolvimento de Sistemas`
+`CURSO: Sistemas de informação`
 
 `DISCIPLINA: Desenvolvimento de Aplicações Distribuídas`
 
