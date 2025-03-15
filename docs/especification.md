@@ -29,31 +29,22 @@ A falta de planejamento e organização impacta diretamente a produtividade das 
 
 ## Público-Alvo
 
-O sistema será direcionado a pessoas que precisam de uma melhor organização em suas atividades diárias, incluindo:
-
-Profissionais que desejam administrar melhor suas tarefas e prazos.
-
-Estudantes que necessitam planejar seus estudos e trabalhos acadêmicos.
-
-Autônomos e freelancers que gerenciam múltiplos projetos simultaneamente.
-
-Qualquer pessoa que busca uma ferramenta simples e eficiente para organização de compromissos.
+O Cash Control é voltado para universitários que precisam gerenciar melhor suas finanças e para adultos entre 18 e 35 anos que buscam um controle mais eficiente de seus gastos e receitas.
+A plataforma oferece uma solução intuitiva e acessível para ajudar esses usuários a organizar suas transações, estabelecer metas financeiras e acompanhar seus hábitos de consumo de forma prática e personalizada.
 
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto.
-
-Caso deseje atribuir uma imagem a sua persona, utilize o site https://thispersondoesnotexist.com/
+O Cash Control é uma plataforma de gerenciamento financeiro que permite aos usuários registrar, categorizar e acompanhar suas transações financeiras de forma intuitiva. 
+Entre suas principais funcionalidades, estão o cadastro e autenticação de usuários, o controle de receitas e despesas, a geração de relatórios personalizados e a visualização de tendências financeiras para uma gestão mais eficiente.
+Por meio dessa abordagem estruturada, o Cash Control visa oferecer uma ferramenta prática e confiável para que universitários e jovens adultos possam organizar melhor suas finanças e tomar decisões financeiras mais conscientes.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Lucas, 28 anos, programador freelancer
+Lucas trabalha por conta própria e recebe pagamentos irregulares. Ele precisa de um aplicativo que permita cadastrar receitas e despesas de forma rápida, categorizando-as para entender seu fluxo de caixa mensal.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Ana, 22 anos, universitária
+Ana recebe uma mesada dos pais e tem um estágio remunerado. Seu desafio é controlar os gastos para não ficar sem dinheiro antes do fim do mês. Ela busca um aplicativo simples para acompanhar sua renda e despesas.
 
 ## Histórias de Usuários
 
@@ -61,8 +52,12 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Usuário do sistema  | Cadastrar minhas receitas e despesas | Controlar melhor minhas finanças     |
+|Usuário do sistema  | Categorizar minhas transações      | Facilitar a análise dos meus gastos    |
+|Usuário do sistema  | Gerar relatórios financeiros       | Acompanhar meu fluxo de caixa mensal   |
+|Usuário do sistema  | Definir metas de economia          | Melhoror planejamento para planos futuros  |
+|Usuário do sistema  | 	Acessar a aplicação em diferentes dispositivos   | Ter flexibilidade e praticidade           |
+|Administrador       | Monitorar registros do sistema     | Garantir a integridade dos dados       |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
