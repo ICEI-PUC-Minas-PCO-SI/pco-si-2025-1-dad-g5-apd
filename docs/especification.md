@@ -74,7 +74,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-005| O sistema deve exibir um histórico das transações cadastradas, permitindo a filtragem por período, categoria ou tipo.   | MÉDIA |
 |RF-006| O sistema deve gerar relatórios financeiros mensais e anuais.   | ALTA | 
 |RF-007| O sistema deve permitir que o usuário configure metas financeiras, como limite de gastos mensais por categoria.   | MÉDIA | 
-|RF-008| O sistema deve permitir o controle de saldo e orçamento mensal.   | MÉDIA | 
+|RF-008| O sistema deve exibir o saldo e gasto diário sugerido.   | MÉDIA | 
 |RF-009| O usuário pode configurar notificações sobre gastos acima do orçamento.  | BAIXA | 
 |RF-010| O usuário pode exportar relatórios em PDF ou CSV.   | MÉDIA | 
 
