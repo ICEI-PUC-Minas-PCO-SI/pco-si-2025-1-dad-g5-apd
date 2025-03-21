@@ -76,7 +76,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-007| O sistema deve permitir que o usuário configure metas financeiras, como limite de gastos mensais por categoria.   | MÉDIA | 
 |RF-008| O sistema deve permitir o controle de saldo e orçamento mensal.   | MÉDIA | 
 |RF-009| O usuário pode configurar notificações sobre gastos acima do orçamento.  | BAIXA | 
-|RF-009| O usuário pode exportar relatórios em PDF ou CSV.   | MÉDIA | 
+|RF-010| O usuário pode exportar relatórios em PDF ou CSV.   | MÉDIA | 
 
 
 ### Requisitos não Funcionais
