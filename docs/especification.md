@@ -86,6 +86,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| Os dados devem ser armazenados de forma segura utilizando criptografia. | ALTA | 
 |RNF-004| O sistema deve oferecer autenticação segura. | ALTA | 
 |RNF-005| O sistema deve suportar múltiplos usuários simultaneamente. | MÉDIA | 
+|RNF-006| O sistema deve suportar pelo menos 10.000 usuários simultâneos sem degradação do desempenho. | MÉDIA | 
+|RNF-007| A aplicação deve utilizar um banco de dados otimizado para consultas rápidas de transações financeiras | ALTA | 
+|RNF-008| O sistema deve possuir logs detalhados de erros e atividades dos usuários para auditoria. | MÉDIA | 
+|RNF-009| A aplicação deve possuir uma interface intuitiva, garantindo que novos usuários possam navegar sem necessidade de treinamento. | ALTA | 
+|RNF-010| O sistema deve permitir backup automático dos dados diariamente. | MÉDIA | 
+|RNF-011| A aplicação deve estar em conformidade com a LGPD (Lei Geral de Proteção de Dados) e outras normas de privacidade relevantes. | ALTA | 
+
 
 ## Restrições
 
