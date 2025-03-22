@@ -109,15 +109,21 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Arquitetura da Solução
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
-
-![arq](https://github.com/user-attachments/assets/b9402e05-8445-47c3-9d47-f11696e38a3d)
+A solução será desenvolvida como uma aplicação web responsiva, baseada em tecnologias modernas para garantir acessibilidade, segurança e usabilidade.
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Frontend: Desenvolvido utilizando HTML, CSS e JavaScript para uma interface interativa e acessível.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+Gerenciamento de Estado: Armazenamento e manipulação de dados utilizando soluções nativas do JavaScript.
+
+Backend: Desenvolvido em Node.js para manipulação de dados e lógica de negócio.
+
+Banco de Dados: MySQL para armazenamento estruturado de dados financeiros.
+
+Autenticação: Implementada de forma básica com armazenamento de credenciais no banco de dados ou localmente.
+
+@@ Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário. @@
 
 # Planejamento do projeto
 
@@ -126,16 +132,16 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 > Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
 
 ### Sprint 1
-- _Scrum master_: AlunaX
-- Protótipos: AlunoY
-- Testes: AlunoK
-- Documentação: AlunaZ
+- _Scrum master_: Matheus Felipe
+- Protótipos: Michael Pires
+- Testes: André Eller
+- Documentação: Arthur Parreiras
 
 ### Sprint 2
-- _Scrum master_: AlunaY
-- Desenvolvedor _front-end_: AlunoX
-- Desenvolvedor _back-end_: AlunoK
-- Testes: AlunaZ
+- _Scrum master_: Matheus Felipe
+- Desenvolvedor _front-end_: Michael Pires
+- Desenvolvedor _back-end_: Arthur Parreiras
+- Testes: André Eller
 
 ##  Quadro de tarefas
 
