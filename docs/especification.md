@@ -129,8 +129,6 @@ Autenticação: Implementada de forma básica com armazenamento de credenciais n
 
 ##  Divisão de papéis
 
-> Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
-
 ### Sprint 1
 - _Scrum master_: Matheus Felipe
 - Protótipos: Michael Pires
@@ -145,18 +143,16 @@ Autenticação: Implementada de forma básica com armazenamento de credenciais n
 
 ##  Quadro de tarefas
 
-> Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
-
 ### Sprint 1
 
 Atualizado em: 21/04/2024
 
-| Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
-| :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| AlunaX        | Introdução | 01/02/2024     | 07/02/2024 | ✔️    | 05/02/2024      |
-| AlunaZ        | Objetivos    | 03/02/2024     | 10/02/2024 | 📝    |                 |
-| AlunoY        | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
-| AlunoK        | Personas 1  |    01/01/2024        | 12/02/2005 | ❌    |       |
+| Responsável   | Tarefa/Requisito      | Iniciado em    | Prazo      | Status | Terminado em     |
+| :----         |    :----              |      :----:    | :----:     | :----: | :----:           |
+| Matheus       | Introdução            | 01/02/2024     | 07/02/2024 | ✔️     | 05/02/2024      |
+| Michael       | Objetivos             | 03/02/2024     | 10/02/2024 | 📝     |                 |
+| André         | Histórias de usuário  | 01/01/2024     | 07/01/2005 | ⌛     |                 |
+| Arthur        | Personas              | 01/01/2024     | 12/02/2005 | ❌     |                 |
 
 ### Sprint 2
 
