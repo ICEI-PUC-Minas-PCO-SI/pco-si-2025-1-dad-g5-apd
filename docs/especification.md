@@ -190,11 +190,8 @@ Revisão e Testes: Validação da implementação.
 
 Entrega e Retrospectiva: Avaliação e melhoria para a próxima sprint.
 
-## Ferramentas
+## Ferramenta
 
-Liste todas as ferramentas que foram empregadas no projeto, justificando a escolha delas, sempre que possível.
-
-Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.
 
 | Ambiente                            | Plataforma                         | Link de acesso                         |
 |-------------------------------------|------------------------------------|----------------------------------------|
@@ -202,5 +199,5 @@ Exemplo: os artefatos do projeto são desenvolvidos a partir de diversas platafo
 | Documentos do projeto               | GitHub                             | http://....                            |
 | Projeto de interface                | Figma                              | http://....                            |
 | Gerenciamento do projeto            | GitHub Projects                    | http://....                            |
-| Hospedagem                          | Vercel                             | http://....                            |
+| Codigo                              | Vs Code                            | http://....                            |
  
