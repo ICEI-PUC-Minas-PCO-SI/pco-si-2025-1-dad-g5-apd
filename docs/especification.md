@@ -123,8 +123,6 @@ Banco de Dados: MySQL para armazenamento estruturado de dados financeiros.
 
 Autenticação: Implementada de forma básica com armazenamento de credenciais no banco de dados ou localmente.
 
-@@ Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário. @@
-
 # Planejamento do projeto
 
 ##  Divisão de papéis
