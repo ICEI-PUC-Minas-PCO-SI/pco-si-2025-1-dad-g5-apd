@@ -109,7 +109,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 # Arquitetura da Solução
 
-A solução será desenvolvida como uma aplicação web responsiva, baseada em tecnologias modernas para garantir acessibilidade, segurança e usabilidade.
+![Descrição da imagem](img/arquitetura-draw.png)
 
 ## Tecnologias Utilizadas
 
