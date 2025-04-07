@@ -1,0 +1,34 @@
+# node modules
+node_modules/
+
+# variáveis de ambiente
+.env
+
+# arquivos de log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs e editores
+.vscode/
+.idea/
+
+# arquivos temporários
+tmp/
+temp/
+
+# arquivos de build
+dist/
+build/
+
+# backups do VS Code ou outros
+*.bak
+
+# database local (caso salve dados em arquivos locais)
+*.sqlite
+*.sqlite3
