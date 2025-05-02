@@ -1,0 +1,24 @@
+{
+  "name": "pco-si-2025-1-dad-g5-apd",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-g5-apd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-g5-apd/issues"
+  },
+  "homepage": "https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-g5-apd#readme",
+  "description": "",
+  "dependencies": {
+    "fastify": "^5.3.2"
+  }
+}
