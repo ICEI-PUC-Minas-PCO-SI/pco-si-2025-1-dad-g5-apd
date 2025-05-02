@@ -1,15 +1,21 @@
+import { PrismaClient } from '../generated/prisma/index.js';
+const prisma = new PrismaClient();
+
 export async function transactionRoutes(server, opts) {
-  let transacoes = [];
 
   // Listar todas as transações de um usuário
-  server.get('/usuarios/:id/transacoes', async (request, reply) => {
+  server.get('/users/:id/transacoes', async (request, reply) => {
     const { id } = request.params;
-    const transacoesDoUsuario = transacoes.filter(t => t.idUsuario === parseInt(id));
-    return transacoesDoUsuario;
+
+    const transacoes = await prisma.transacao.findMany({
+      where: { usuarioId: parseInt(id) }
+    });
+
+    return transacoes;
   });
 
-  // Criar uma nova transação para um usuário
-  server.post('/usuarios/:id/transacoes', async (request, reply) => {
+  // Criar nova transação
+  server.post('/users/:id/transacoes', async (request, reply) => {
     const { id } = request.params;
     const { tipo, valor, descricao } = request.body;
 
@@ -17,55 +23,47 @@ export async function transactionRoutes(server, opts) {
       return reply.status(400).send({ erro: 'Tipo de transação inválido. Use "entrada" ou "saida".' });
     }
 
-    const novaTransacao = {
-      idTransacao: transacoes.length + 1,
-      idUsuario: parseInt(id),
-      tipo,
-      valor,
-      descricao
-    };
+    const nova = await prisma.transacao.create({
+      data: {
+        tipo,
+        valor,
+        descricao,
+        usuarioId: parseInt(id)
+      }
+    });
 
-    transacoes.push(novaTransacao);
-    return reply.status(201).send(novaTransacao);
+    return reply.status(201).send(nova);
   });
 
-  // Atualizar uma transação específica de um usuário
-  server.put('/usuarios/:id/transacoes/:idTransacao', async (request, reply) => {
-    const { id, idTransacao } = request.params;
+  // Atualizar transação
+  server.put('/users/:id/transacoes/:idTransacao', async (request, reply) => {
+    const { idTransacao } = request.params;
     const { tipo, valor, descricao } = request.body;
 
-    const index = transacoes.findIndex(t =>
-      t.idUsuario === parseInt(id) && t.idTransacao === parseInt(idTransacao)
-    );
+    try {
+      const atualizada = await prisma.transacao.update({
+        where: { id: parseInt(idTransacao) },
+        data: { tipo, valor, descricao }
+      });
 
-    if (index === -1) {
+      return reply.send(atualizada);
+    } catch (error) {
       return reply.status(404).send({ erro: 'Transação não encontrada' });
     }
-
-    transacoes[index] = {
-      ...transacoes[index],
-      tipo,
-      valor,
-      descricao
-    };
-
-    return reply.send(transacoes[index]);
   });
 
-  // Deletar uma transação específica de um usuário
-  server.delete('/usuarios/:id/transacoes/:idTransacao', async (request, reply) => {
-    const { id, idTransacao } = request.params;
+  // Deletar transação
+  server.delete('/users/:id/transacoes/:idTransacao', async (request, reply) => {
+    const { idTransacao } = request.params;
 
-    const index = transacoes.findIndex(t =>
-      t.idUsuario === parseInt(id) && t.idTransacao === parseInt(idTransacao)
-    );
+    try {
+      const deletada = await prisma.transacao.delete({
+        where: { id: parseInt(idTransacao) }
+      });
 
-    if (index === -1) {
+      return reply.send({ mensagem: 'Transação removida com sucesso', transacao: deletada });
+    } catch (error) {
       return reply.status(404).send({ erro: 'Transação não encontrada' });
     }
-
-    const transacaoRemovida = transacoes.splice(index, 1)[0];
-    return reply.send({ mensagem: 'Transação removida com sucesso', transacao: transacaoRemovida });
   });
 }
-
