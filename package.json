@@ -4,7 +4,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node --watch src/server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,10 @@
   "homepage": "https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2025-1-dad-g5-apd#readme",
   "description": "",
   "dependencies": {
+    "@prisma/client": "^6.7.0",
     "fastify": "^5.3.2"
+  },
+  "devDependencies": {
+    "prisma": "^6.7.0"
   }
 }
