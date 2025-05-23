@@ -67,6 +67,7 @@ Tecnologias Utilizadas: Node.js | PostgreSQL | Prisma |
 | RF-008 | O sistema deve permitir que o usuário visualize todas as suas transações.               | Matheus     | routes/transactions.js          |
 | RF-009 | O sistema deve gerar um relatório com total de entradas, saídas e saldo final.          | Arthur     | routes/relatorios.js         |
 | RF-010 | O sistema deve indicar se o saldo do usuário é positivo ou negativo no relatório.       | Arthur     | routes/relatorios.js         |
+| RF-011 | O sistema deve gerar relatório em PDF e CSV                                             | André  | routes/relatorios.js         |
 
 
 
