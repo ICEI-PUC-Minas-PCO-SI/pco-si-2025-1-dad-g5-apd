@@ -2,7 +2,14 @@
 # Desenvolvimento da Aplicação
 
 ## Modelagem da Aplicação
-[Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
+| Camada     | Responsabilidade                                                                 | Principais Pastas       |
+|------------|-----------------------------------------------------------------------------------|--------------------------|
+| Model      | Representa as entidades do domínio e mapeia-as no PostgreSQL usando o Prisma     | /src/models              |
+| Controller | Recebe as requisições HTTP, valida dados, invoca serviços e devolve respostas    | /src/controllers         |
+| Service    | Contém a lógica de negócio (ex.: cálculo de saldo diário sugerido, relatórios)   | /src/services            |
+| Routes     | Define os endpoints e aplica middlewares (autenticação JWT, validação, etc.)     | /src/routes              |
+| Views      | Renderiza as páginas HTML usando templates Handlebars                            | /src/views               |
+
 
 
 ## Tecnologias Utilizadas
