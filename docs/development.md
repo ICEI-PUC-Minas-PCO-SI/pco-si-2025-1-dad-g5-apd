@@ -14,9 +14,17 @@
 
 ## Tecnologias Utilizadas
 
-Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs Web. A tecnologia certa para o seu projeto dependerá dos seus objetivos, dos seus clientes e dos recursos que a API deve fornecer.
+#Back-end:
 
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+Node.js
+
+#Front-end:
+
+React
+
+#Banco de Dados:
+
+PostgreSQL
 
 
 ## Programação de Funcionalidades
