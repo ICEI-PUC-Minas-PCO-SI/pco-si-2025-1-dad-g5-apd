@@ -29,9 +29,47 @@ PostgreSQL
 
 ## Programação de Funcionalidades
 
-Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
+Requisito Atendido: RF-001 — O sistema deve permitir que o usuário crie uma conta e faça login.
 
-Para cada requisito funcional, pode ser entregue um artefato desse tipo.
+Descrição: Permite ao usuário se cadastrar com nome, e-mail e senha, e fazer login validando as credenciais.
+
+Artefatos Criados:
+
+/src/controllers/authController.js
+
+/src/routes/authRoutes.js
+
+/src/models/User.js
+
+/src/services/authService.js
+
+Tecnologias Utilizadas:
+
+Node.js
+
+PostgreSQL
+
+Prisma
+
+Requisito Atendido: RF-002 — O sistema deve permitir que o usuário altere seus dados cadastrais.
+
+Descrição: Permite que o usuário logado atualize seu nome e senha.
+
+Artefatos Criados:
+
+/src/controllers/userController.js
+
+/src/routes/userRoutes.js
+
+/src/services/userService.js
+
+Tecnologias Utilizadas:
+
+Node.js
+
+PostgreSQL
+
+Prisma
 
 ### Requisitos Atendidos
 
