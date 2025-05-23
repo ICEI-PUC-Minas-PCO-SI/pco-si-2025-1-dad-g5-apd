@@ -35,13 +35,7 @@ Descrição: Permite ao usuário se cadastrar com nome, e-mail e senha, e fazer 
 
 Artefatos Criados:
 
-/src/controllers/authController.js
 
-/src/routes/authRoutes.js
-
-/src/models/User.js
-
-/src/services/authService.js
 
 Tecnologias Utilizadas:
 
@@ -50,18 +44,13 @@ Node.js
 PostgreSQL
 
 Prisma
-
+------------------------------------------------------------------------------------------------------------------------
 Requisito Atendido: RF-002 — O sistema deve permitir que o usuário altere seus dados cadastrais.
 
 Descrição: Permite que o usuário logado atualize seu nome e senha.
 
 Artefatos Criados:
 
-/src/controllers/userController.js
-
-/src/routes/userRoutes.js
-
-/src/services/userService.js
 
 Tecnologias Utilizadas:
 
@@ -70,6 +59,7 @@ Node.js
 PostgreSQL
 
 Prisma
+
 
 ### Requisitos Atendidos
 
