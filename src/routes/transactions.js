@@ -3,7 +3,7 @@ const prisma = new PrismaClient();
 
 export async function transactionRoutes(server, opts) {
 
-  // Listar todas as transações de um usuário
+  // lista transacoes do user
   server.get('/users/:id/transacoes', async (request, reply) => {
     const { id } = request.params;
 
@@ -14,9 +14,6 @@ export async function transactionRoutes(server, opts) {
     return transacoes;
   });
 
-  
-
-  // Criar nova transação
   server.post('/users/:id/transacoes', async (request, reply) => {
     const { id } = request.params;
     const { tipo, valor, descricao } = request.body;
@@ -37,7 +34,7 @@ export async function transactionRoutes(server, opts) {
     return reply.status(201).send(nova);
   });
 
-  // Atualizar transação
+  // att transacao
   server.put('/users/:id/transacoes/:idTransacao', async (request, reply) => {
     const { idTransacao } = request.params;
     const { tipo, valor, descricao } = request.body;
@@ -54,7 +51,7 @@ export async function transactionRoutes(server, opts) {
     }
   });
 
-  // Deletar transação
+  // deleta transacao
   server.delete('/users/:id/transacoes/:idTransacao', async (request, reply) => {
     const { idTransacao } = request.params;
 

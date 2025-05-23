@@ -1,64 +1,75 @@
 import { PrismaClient } from '../generated/prisma/index.js';
+import { hashPassword, checkPassword } from '../helper/hash.js'; 
 
 const prisma = new PrismaClient();
 
 export async function userRoutes(server, opts) {
 
-  // Listar todos os usuários
-  server.get('/users', async (request, reply) => {
-    const users = await prisma.usuario.findMany();
+  // buscar users
+  server.get('/users', async (_, reply) => {
+    const users = await prisma.usuario.findMany({
+      select: { id: true, nome: true, email: true }
+    });
     return users;
   });
 
-  // Buscar usuário por ID
-  server.get('/users/:id', async (request, reply) => {
-    const id = parseInt(request.params.id);
-    const user = await prisma.usuario.findUnique({ where: { id } });
-    if (!user) {
-      return reply.status(404).send({ error: 'Usuário não encontrado' });
-    }
+  // buscar por id
+  server.get('/users/:id', async (req, reply) => {
+    const id = +req.params.id;
+    const user = await prisma.usuario.findUnique({
+      where: { id },
+      select: { id: true, nome: true, email: true }
+    });
+    if (!user) return reply.status(404).send({ error: 'Usuário não encontrado' });
     return user;
   });
 
-  // Criar novo usuário
-  server.post('/users', async (request, reply) => {
-    const { nome, email, senha } = request.body;
-
+  // criar users
+  server.post('/users', async (req, reply) => {
+    const { nome, email, senha } = req.body;
     try {
+      const senhaHash = await hashPassword(senha);
+
       const newUser = await prisma.usuario.create({
-        data: { nome, email, senha }
+        data: { nome, email, senha: senhaHash },
+        select: { id: true, nome: true, email: true }
       });
+
       return reply.status(201).send(newUser);
-    } catch (error) {
-      return reply.status(400).send({ error: 'Erro ao criar usuário', details: error.message });
+    } catch (err) {
+      return reply.status(400).send({ error: 'Erro ao criar usuário', details: err.message });
     }
   });
 
-  // Atualizar usuário
-  server.put('/users/:id', async (request, reply) => {
-    const id = parseInt(request.params.id);
-    const { nome, email, senha } = request.body;
+  // atualizar users
+  server.put('/users/:id', async (req, reply) => {
+    const id = +req.params.id;
+    const { nome, email, senha } = req.body;
 
     try {
-      const updatedUser = await prisma.usuario.update({
+      const data = { nome, email };
+
+      if (senha) data.senha = await hashPassword(senha);
+
+      const updated = await prisma.usuario.update({
         where: { id },
-        data: { nome, email, senha }
+        data,
+        select: { id: true, nome: true, email: true }
       });
-      return reply.send(updatedUser);
-    } catch (error) {
+
+      return updated;
+    } catch (err) {
       return reply.status(404).send({ error: 'Usuário não encontrado' });
     }
   });
 
-  // Deletar usuário
-  server.delete('/users/:id', async (request, reply) => {
-    const id = parseInt(request.params.id);
+  // deletar users
+  server.delete('/users/:id', async (req, reply) => {
+    const id = +req.params.id;
     try {
-      const deletedUser = await prisma.usuario.delete({
-        where: { id }
-      });
-      return reply.send({ message: 'Usuário removido com sucesso', user: deletedUser });
-    } catch (error) {
+      await prisma.usuario.delete({ where: { id } });
+      return { message: 'Usuário removido com sucesso' };
+    } catch {
       return reply.status(404).send({ error: 'Usuário não encontrado' });
     }
   });
