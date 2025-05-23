@@ -57,16 +57,16 @@ Tecnologias Utilizadas: Node.js | PostgreSQL | Prisma |
 
 | ID     | Descrição do Requisito                                                                 | Responsável | Artefato Criado |
 |--------|------------------------------------------------------------------------------------------|-------------|-----------------|
-| RF-001 | O sistema deve permitir que o usuário crie uma conta.                                   | Matheus     | Node js         |
-| RF-002 | O sistema deve permitir que o usuário faça login.                                       | Michael     | Node js         |
-| RF-003 | O sistema deve permitir que o usuário altere seus dados cadastrais.                     | Matheus/Michael     | Node js         |
-| RF-004 | O sistema deve salvar a sessão do usuário com um token após o login.                    | Michael     | Node js         |
-| RF-005 | O sistema deve permitir que o usuário registre novas transações (entrada/saída).        | Matheus     | Node js         |
-| RF-006 | O sistema deve permitir que o usuário edite suas transações registradas.                | Matheus     | Node js         |
-| RF-007 | O sistema deve permitir que o usuário exclua uma transação.                             | Matheus     | Node js         |
-| RF-008 | O sistema deve permitir que o usuário visualize todas as suas transações.               | Matheus     | Node js         |
-| RF-009 | O sistema deve gerar um relatório com total de entradas, saídas e saldo final.          | Arthur     | Node js         |
-| RF-010 | O sistema deve indicar se o saldo do usuário é positivo ou negativo no relatório.       | Arthur     | Node js         |
+| RF-001 | O sistema deve permitir que o usuário crie uma conta.                                   | Matheus     | routes/user.js         |
+| RF-002 | O sistema deve permitir que o usuário faça login.                                       | Michael     | routes/auth.js         |
+| RF-003 | O sistema deve permitir que o usuário altere seus dados cadastrais.                     | Matheus/Michael     | users.js         |
+| RF-004 | O sistema deve salvar a sessão do usuário com um token após o login.                    | Michael     | routes/auth.js         |
+| RF-005 | O sistema deve permitir que o usuário registre novas transações (entrada/saída).        | Matheus     | routes/transactions.js         |
+| RF-006 | O sistema deve permitir que o usuário edite suas transações registradas.                | Matheus     | routes/transactions.js         |
+| RF-007 | O sistema deve permitir que o usuário exclua uma transação.                             | Matheus     | routes/transactions.js         |
+| RF-008 | O sistema deve permitir que o usuário visualize todas as suas transações.               | Matheus     | routes/transactions.js          |
+| RF-009 | O sistema deve gerar um relatório com total de entradas, saídas e saldo final.          | Arthur     | routes/relatorios.js         |
+| RF-010 | O sistema deve indicar se o saldo do usuário é positivo ou negativo no relatório.       | Arthur     | routes/relatorios.js         |
 
 
 
