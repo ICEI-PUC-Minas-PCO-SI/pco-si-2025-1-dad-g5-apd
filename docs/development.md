@@ -55,7 +55,7 @@ Tecnologias Utilizadas: Node.js | PostgreSQL | Prisma |
 
 
 
-### Requisitos Funcionais
+## Requisitos Funcionais
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
