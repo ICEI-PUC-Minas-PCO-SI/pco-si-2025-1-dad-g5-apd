@@ -33,7 +33,6 @@ Requisito Atendido: RF-001 — O sistema deve permitir que o usuário crie uma c
 
 Descrição: Permite ao usuário se cadastrar com nome, e-mail e senha, e fazer login validando as credenciais.
 
-Artefatos Criados:
 
 
 
@@ -45,7 +44,6 @@ Requisito Atendido: RF-002 — O sistema deve permitir que o usuário altere seu
 
 Descrição: Permite que o usuário logado atualize seu nome e senha.
 
-Artefatos Criados:
 
 
 Tecnologias Utilizadas: Node.js | PostgreSQL | Prisma |
