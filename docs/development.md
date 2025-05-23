@@ -35,13 +35,13 @@ Para cada requisito funcional, pode ser entregue um artefato desse tipo.
 
 ### Requisitos Atendidos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais que relacionam o escopo do projeto com os artefatos criados:
+
 
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito | Responsável | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | João | index.html |
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês | Ana Paula | cadastro-noticia.html |
+|RF-001| O sistema deve permitir que o usuário crie uma conta e faça login.| Matheus | Node js|
+|RF-002| O sistema deve permitir que o usuário altere seus dados cadastrais. | Matheus| Node js |
 
 
