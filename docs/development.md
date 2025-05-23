@@ -59,7 +59,7 @@ Tecnologias Utilizadas: Node.js | PostgreSQL | Prisma |
 |--------|------------------------------------------------------------------------------------------|-------------|-----------------|
 | RF-001 | O sistema deve permitir que o usuário crie uma conta.                                   | Matheus     | routes/user.js         |
 | RF-002 | O sistema deve permitir que o usuário faça login.                                       | Michael     | routes/auth.js         |
-| RF-003 | O sistema deve permitir que o usuário altere seus dados cadastrais.                     | Matheus/Michael     | users.js         |
+| RF-003 | O sistema deve permitir que o usuário altere seus dados cadastrais.                     | Matheus/Michael     | routes/users.js         |
 | RF-004 | O sistema deve salvar a sessão do usuário com um token após o login.                    | Michael     | routes/auth.js         |
 | RF-005 | O sistema deve permitir que o usuário registre novas transações (entrada/saída).        | Matheus     | routes/transactions.js         |
 | RF-006 | O sistema deve permitir que o usuário edite suas transações registradas.                | Matheus     | routes/transactions.js         |
