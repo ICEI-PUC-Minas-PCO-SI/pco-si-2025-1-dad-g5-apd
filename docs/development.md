@@ -37,13 +37,9 @@ Artefatos Criados:
 
 
 
-Tecnologias Utilizadas:
+Tecnologias Utilizadas: Node.js | PostgreSQL | Prisma |
 
-Node.js
 
-PostgreSQL
-
-Prisma
 ------------------------------------------------------------------------------------------------------------------------
 Requisito Atendido: RF-002 — O sistema deve permitir que o usuário altere seus dados cadastrais.
 
@@ -52,13 +48,7 @@ Descrição: Permite que o usuário logado atualize seu nome e senha.
 Artefatos Criados:
 
 
-Tecnologias Utilizadas:
-
-Node.js
-
-PostgreSQL
-
-Prisma
+Tecnologias Utilizadas: Node.js | PostgreSQL | Prisma |
 
 
 ### Requisitos Atendidos
