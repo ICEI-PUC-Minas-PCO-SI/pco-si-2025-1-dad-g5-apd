@@ -3,7 +3,7 @@ const prisma = new PrismaClient();
 
 export async function transactionRoutes(server, opts) {
 
-  /* Listar todas as transações de um usuário
+  //Listar todas as transações de um usuário
   server.get('/users/:id/transacoes', async (request, reply) => {
     const { id } = request.params;
 
@@ -11,16 +11,6 @@ export async function transactionRoutes(server, opts) {
       where: { usuarioId: parseInt(id) }
     });
 
-    return transacoes;
-  }); */
-
-  server.get('/users/:id/transacoes', async (request, reply) => {
-    const { id } = request.params;
-  
-    const transacoes = await prisma.transacao.findMany({
-      where: { usuarioId: parseInt(id) },
-    });
-  
     const ganhos = transacoes
       .filter(t => t.tipo === 'entrada')
       .reduce((acc, t) => acc + t.valor, 0);
@@ -30,14 +20,16 @@ export async function transactionRoutes(server, opts) {
       .reduce((acc, t) => acc + t.valor, 0);
   
     const saldo = ganhos - gastos;
-  
+
+
     return {
       transacoes,
       totalGanhos: ganhos,
       totalGastos: gastos,
       saldoFinal: saldo,
     };
-  });
+  }); 
+
   
 
   // Criar nova transação
