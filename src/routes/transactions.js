@@ -3,7 +3,7 @@ const prisma = new PrismaClient();
 
 export async function transactionRoutes(server, opts) {
 
-  //Listar todas as transações de um usuário
+  // Listar todas as transações de um usuário
   server.get('/users/:id/transacoes', async (request, reply) => {
     const { id } = request.params;
 
@@ -11,24 +11,8 @@ export async function transactionRoutes(server, opts) {
       where: { usuarioId: parseInt(id) }
     });
 
-    const ganhos = transacoes
-      .filter(t => t.tipo === 'entrada')
-      .reduce((acc, t) => acc + t.valor, 0);
-  
-    const gastos = transacoes
-      .filter(t => t.tipo === 'saida')
-      .reduce((acc, t) => acc + t.valor, 0);
-  
-    const saldo = ganhos - gastos;
-
-
-    return {
-      transacoes,
-      totalGanhos: ganhos,
-      totalGastos: gastos,
-      saldoFinal: saldo,
-    };
-  }); 
+    return transacoes;
+  });
 
   
 
@@ -84,4 +68,34 @@ export async function transactionRoutes(server, opts) {
       return reply.status(404).send({ erro: 'Transação não encontrada' });
     }
   });
+
+// Relatório de transações do usuário
+server.get('/users/:id/relatorio', async (request, reply) => {
+  const { id } = request.params;
+
+  const transacoes = await prisma.transacao.findMany({
+    where: { usuarioId: parseInt(id) },
+    select: {
+      tipo: true,
+      valor: true,
+      descricao: true,
+    },
+  });
+
+  const entradas = transacoes.filter(t => t.tipo === 'entrada');
+  const saidas = transacoes.filter(t => t.tipo === 'saida');
+
+  const totalEntradas = entradas.reduce((acc, t) => acc + t.valor, 0);
+  const totalSaidas = saidas.reduce((acc, t) => acc + t.valor, 0);
+  const saldoFinal = totalEntradas - totalSaidas;
+
+  return {
+    entradas,
+    saidas,
+    totalEntradas,
+    totalSaidas,
+    saldoFinal,
+    situacao: saldoFinal >= 0 ? 'positivo' : 'negativo',
+  };
+});
 }
