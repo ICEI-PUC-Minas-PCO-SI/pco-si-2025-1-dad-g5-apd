@@ -123,6 +123,10 @@ Banco de Dados: MySQL para armazenamento estruturado de dados financeiros.
 
 Autenticação: Implementada de forma básica com armazenamento de credenciais no banco de dados ou localmente.
 
+## Diagrama de classes
+
+![Descrição da imagem](img/diagramaclasses.png)
+
 # Planejamento do projeto
 
 ##  Divisão de papéis
