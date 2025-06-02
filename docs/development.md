@@ -2,6 +2,7 @@
 # Desenvolvimento da Aplicação
 
 ## Modelagem da Aplicação
+
 | Camada     | Responsabilidade                                                                 | Principais Pastas       |
 |------------|-----------------------------------------------------------------------------------|--------------------------|
 | Model      | Representa as entidades do domínio e mapeia-as no PostgreSQL usando o Prisma     | /src/models              |
@@ -10,6 +11,7 @@
 | Routes     | Define os endpoints e aplica middlewares (autenticação JWT, validação, etc.)     | /src/routes              |
 | Views      | Renderiza as páginas HTML usando templates Handlebars                            | /src/views               |
 
+![Descrição da imagem](img/diagramaclasses.png)
 
 
 ## Tecnologias Utilizadas
