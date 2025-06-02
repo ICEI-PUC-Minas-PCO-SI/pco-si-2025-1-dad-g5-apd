@@ -11,6 +11,8 @@
 | Routes     | Define os endpoints e aplica middlewares (autenticação JWT, validação, etc.)     | /src/routes              |
 | Views      | Renderiza as páginas HTML usando templates Handlebars                            | /src/views               |
 
+## Diagrama de classes
+
 ![Descrição da imagem](img/diagramaclasses.png)
 
 
