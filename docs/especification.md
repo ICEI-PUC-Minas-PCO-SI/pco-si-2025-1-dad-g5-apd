@@ -98,22 +98,22 @@ A solução segue o padrão MVC simplificado:
 | Prisma ORM    | Integração com PostgreSQL         |
 | PostgreSQL    | Banco de dados relacional         |
 | bcryptjs      | Criptografia de senha             |
-| JWT           | Autenticação                     |
+| JWT           | Autenticação                      |
 | Postman/Newman| Testes automatizados              |
 
 ## Planejamento do Projeto
 
 ### Sprint 1
 - _Scrum master_: Matheus
-- Backend inicial: Michael
-- Modelagem e banco: Arthur
-- Testes: André
+- Backend inicial: Matheus
+- Modelagem e banco: Michael
+- Testes: Michael/Matheus
 
 ### Sprint 2
-- _Scrum master_: Arthur
-- CRUD Usuário: Matheus
-- CRUD Transação: Michael
-- Testes automatizados: André
+- _Scrum master_: Matheus
+- CRUD Usuário: Matheus/Michael
+- CRUD Transação: Matheus/Michael
+- Testes automatizados: Matheus/Arthur
 
 ### Quadro de tarefas
 
@@ -121,21 +121,21 @@ Atualizado em: 12/06/2025
 
 | Responsável | Tarefa                       | Iniciado | Prazo     | Status | Terminado |
 |-------------|------------------------------|----------|-----------|--------|-----------|
-| Matheus     | CRUD Usuários e JWT         | 01/06    | 05/06     | ✔️     | 04/06     |
-| Michael     | CRUD Transações + CSV        | 02/06    | 08/06     | ✔️     | 08/06     |
-| André       | Testes Newman/Postman       | 03/06    | 10/06     | ✔️     | 09/06     |
-| Arthur      | Config Banco e Migrations    | 01/06    | 05/06     | ✔️     | 04/06     |
+| Matheus/Michael     | CRUD Usuários e JWT         | 01/06    | 05/06     | ✔️     | 04/06     |
+| Matheus/Michael     | CRUD Transações + CSV        | 02/06    | 08/06     | ✔️     | 08/06     |
+| Matheus/Arthur      | Testes Newman/Postman       | 03/06    | 10/06     | ✔️     | 09/06     |
+| Michael             | Config Banco e Migrations    | 01/06    | 05/06     | ✔️     | 04/06     |
 
 ## Processo
 
-O grupo utilizou o GitHub Projects para planejar as tarefas, dividir os papéis e acompanhar a execução. Foram organizadas 2 Sprints, com reuniões semanais para revisão e distribuição das pendências.
+O grupo utilizou o GitHub para planejar as tarefas, dividir os papéis e acompanhar a execução. Foram organizadas 2 Sprints, com reuniões semanais para revisão e distribuição das pendências.
 
 ## Ferramentas
 
-| Ambiente                    | Plataforma    | Link                            |
+| Ambiente                    | Plataforma    | Link                             |
 |-----------------------------|---------------|----------------------------------|
-| Repositório do projeto      | GitHub        | https://github.com/grupo-cashcontrol |
-| Documentos do projeto       | Google Docs   | --                             |
-| Testes                      | Postman/Newman| --                             |
-| Banco de dados              | PgAdmin       | --                             |
+| Repositório do projeto      | GitHub        |                                  |
+| Documentos do projeto       | Github        |                                  |
+| Testes                      | Postman/Newman|                                  |
+| Banco de dados              | PgAdmin(PostgreSQL|                              |
 
