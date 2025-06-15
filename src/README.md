@@ -1,6 +1,6 @@
 # Cash Control
 
-`CURSO: Análise e Desenvolvimento de Sistemas`
+`CURSO: Sistemas de Informação`
 
 `DISCIPLINA: Desenvolvimento de Aplicações Distribuídas`
 
@@ -17,7 +17,7 @@ A aplicação foi pensada para ser leve, segura e funcional, possibilitando a in
 
 ## Orientador
 
-* Prof. [Nome do professor orientador]
+* Prof. Kleber Jacques Ferreira de Souza
 
 # Planejamento
 
@@ -26,7 +26,7 @@ A aplicação foi pensada para ser leve, segura e funcional, possibilitando a in
 | SPRINT 1  | [Escopo e Planejamento](docs/especification.md) |
 | SPRINT 2  | [Desenvolvimento da Aplicação](docs/development.md) |
 | SPRINT 3  | [Testes e Validação](docs/tests.md)        |
-| SPRINT 4  | [Apresentação](presentation/README.md)     |
+| SPRINT 4  | [Apresentação]    |
 
 # Código
 
