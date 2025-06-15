@@ -65,7 +65,7 @@ Os testes cobrem os seguintes aspectos:
 
 ### Anexos
 
-- **Collection de Testes (Postman):** `testes-cashcontrol.postman_collection.json`
+- **Collection de Testes (Postman):** `testes-cashcontrol.json`
 - **Relatório HTML gerado pelo Newman:** `resultado.html`
 
 
