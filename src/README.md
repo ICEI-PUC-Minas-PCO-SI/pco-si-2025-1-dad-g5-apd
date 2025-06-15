@@ -28,11 +28,4 @@ A aplicação foi pensada para ser leve, segura e funcional, possibilitando a in
 | SPRINT 3  | [Testes e Validação](docs/tests.md)        |
 | SPRINT 4  | [Apresentação]    |
 
-# Código
-
-- [Código Fonte](src/README.md)
-
-# Apresentação
-
-- [Apresentação da Solução](presentation/README.md)
 
