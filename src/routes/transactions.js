@@ -1,4 +1,6 @@
 import { PrismaClient } from '../generated/prisma/index.js';
+import { Parser } from 'json2csv';
+
 const prisma = new PrismaClient();
 
 export async function transactionRoutes(server, opts) {
@@ -66,33 +68,60 @@ export async function transactionRoutes(server, opts) {
     }
   });
 
-// Relatório de transações do usuário
-server.get('/users/:id/relatorio', async (request, reply) => {
-  const { id } = request.params;
+  // Relatório de transações do usuário (JSON)
+  server.get('/users/:id/relatorio', async (request, reply) => {
+    const { id } = request.params;
 
-  const transacoes = await prisma.transacao.findMany({
-    where: { usuarioId: parseInt(id) },
-    select: {
-      tipo: true,
-      valor: true,
-      descricao: true,
-    },
+    const transacoes = await prisma.transacao.findMany({
+      where: { usuarioId: parseInt(id) },
+      select: {
+        tipo: true,
+        valor: true,
+        descricao: true,
+      },
+    });
+
+    const entradas = transacoes.filter(t => t.tipo === 'entrada');
+    const saidas = transacoes.filter(t => t.tipo === 'saida');
+
+    const totalEntradas = entradas.reduce((acc, t) => acc + t.valor, 0);
+    const totalSaidas = saidas.reduce((acc, t) => acc + t.valor, 0);
+    const saldoFinal = totalEntradas - totalSaidas;
+
+    return {
+      entradas,
+      saidas,
+      totalEntradas,
+      totalSaidas,
+      saldoFinal,
+      situacao: saldoFinal >= 0 ? 'positivo' : 'negativo',
+    };
   });
 
-  const entradas = transacoes.filter(t => t.tipo === 'entrada');
-  const saidas = transacoes.filter(t => t.tipo === 'saida');
+  // Relatório de transações do usuário (CSV)
+  server.get('/users/:id/relatorio/csv', async (request, reply) => {
+    const { id } = request.params;
 
-  const totalEntradas = entradas.reduce((acc, t) => acc + t.valor, 0);
-  const totalSaidas = saidas.reduce((acc, t) => acc + t.valor, 0);
-  const saldoFinal = totalEntradas - totalSaidas;
+    const transacoes = await prisma.transacao.findMany({
+      where: { usuarioId: parseInt(id) },
+      select: {
+        tipo: true,
+        valor: true,
+        descricao: true,
+      },
+    });
 
-  return {
-    entradas,
-    saidas,
-    totalEntradas,
-    totalSaidas,
-    saldoFinal,
-    situacao: saldoFinal >= 0 ? 'positivo' : 'negativo',
-  };
-});
+    if (!transacoes.length) {
+      return reply.status(404).send({ erro: 'Nenhuma transação encontrada.' });
+    }
+
+    const fields = ['tipo', 'valor', 'descricao'];
+    const parser = new Parser({ fields });
+    const csv = parser.parse(transacoes);
+
+    reply
+      .header('Content-Type', 'text/csv')
+      .header('Content-Disposition', `attachment; filename="relatorio_usuario_${id}.csv"`)
+      .send(csv);
+  });
 }
