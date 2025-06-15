@@ -23,9 +23,9 @@ A aplicação foi pensada para ser leve, segura e funcional, possibilitando a in
 
 | Etapa     | Atividade                                 |
 |:---------:|--------------------------------------------|
-| SPRINT 1  | [Escopo e Planejamento](docs/especification.md) |
-| SPRINT 2  | [Desenvolvimento da Aplicação](docs/development.md) |
-| SPRINT 3  | [Testes e Validação](docs/tests.md)        |
+| SPRINT 1  | [Escopo e Planejamento] |
+| SPRINT 2  | [Desenvolvimento da Aplicação] |
+| SPRINT 3  | [Testes e Validação]       |
 | SPRINT 4  | [Apresentação]    |
 
 
