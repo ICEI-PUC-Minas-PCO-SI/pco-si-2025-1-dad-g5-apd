@@ -34,14 +34,14 @@ A estratégia de testes do projeto Cash Control foi elaborada para garantir a co
 
 - Os testes foram estruturados com **validações automáticas de status code** e mensagens esperadas usando scripts no próprio Postman.
 
-- A collection foi nomeada como `testes-cashcontrol.postman_collection.json`.
+- A collection foi nomeada como `testes-cashcontrol.json`.
 
 - Os testes foram executados com o **Newman** pelo terminal e geraram relatórios HTML.
 
 #### Comando exemplo:
 
 ```bash
-newman run testes-cashcontrol.postman_collection.json -r html --reporter-html-export resultado.html
+newman run testes-cashcontrol.json -r html --reporter-html-export resultado.html
 ```
 
 ### Ferramentas Utilizadas
