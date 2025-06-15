@@ -89,8 +89,6 @@ A solução segue o padrão MVC simplificado:
 - **Camada de serviço/modelo**: Prisma ORM conecta ao banco PostgreSQL
 - **Middleware**: JWT para autenticação e controle de acesso
 
-![Diagrama de arquitetura simplificada](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuU9AJyfFqBLJSoaepCjCnKZ8JWn9pyrCJbCJX9pAJIfDpylDqjN8pynDK5r8oypEJcZ8pyrBpCjCJbCJYvfIKeoH2ympKlDpyrBJJ2dGJKpDYvEKe0Kyn9BmZ8ZOfEp4bDWnKO2amK5aibSm5-ZIrnpKhA9Y0ZKfGqoYEI1BKX9C0)
-
 ## Tecnologias Utilizadas
 
 | Tecnologia    | Função                          |
