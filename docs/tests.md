@@ -44,10 +44,6 @@ A estratégia de testes do projeto Cash Control foi elaborada para garantir a co
 newman run testes-cashcontrol.postman_collection.json -r html --reporter-html-export resultado.html
 ```
 
-#### 5. Testes Unitários (em planejamento)
-
-- Pretende-se aplicar Jest ou Vitest para testar lógicas internas de forma isolada (ex: cálculos de saldo).
-
 ### Ferramentas Utilizadas
 
 | Ferramenta          | Finalidade                                               |
@@ -56,7 +52,7 @@ newman run testes-cashcontrol.postman_collection.json -r html --reporter-html-ex
 | Newman              | Automação dos testes em linha de comando                 |
 | Prisma ORM          | Facilita a integração e validação com banco de dados     |
 | JWT                 | Verificação de autenticação/autorização                  |
-| PowerShell/Terminal | Execução dos testes via Newman com geração de relatórios |
+| Terminal VS Code | Execução dos testes via Newman com geração de relatórios |
 
 ### Cobertura de Testes
 
@@ -72,5 +68,4 @@ Os testes cobrem os seguintes aspectos:
 - **Collection de Testes (Postman):** `testes-cashcontrol.postman_collection.json`
 - **Relatório HTML gerado pelo Newman:** `resultado.html`
 
-Esses arquivos devem ser mantidos na raiz do projeto ou em uma pasta `tests/` para fácil execução e rastreamento dos resultados.
 
