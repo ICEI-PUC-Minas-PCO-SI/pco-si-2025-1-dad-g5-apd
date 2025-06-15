@@ -35,12 +35,12 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 6.7.0
- * Query Engine version: 3cff47a7f5d65c3ea74883f1d736e41d68ce91ed
+ * Prisma Client JS version: 6.9.0
+ * Query Engine version: 81e4af48011447c3cc503a190e86995b66d2a28e
  */
 Prisma.prismaVersion = {
-  client: "6.7.0",
-  engine: "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed"
+  client: "6.9.0",
+  engine: "81e4af48011447c3cc503a190e86995b66d2a28e"
 }
 
 Prisma.PrismaClientKnownRequestError = PrismaClientKnownRequestError;
@@ -133,7 +133,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\mayckit\\Documents\\GitHub\\pco-si-2025-1-dad-g5-apd\\src\\generated\\prisma",
+      "value": "C:\\Users\\Matheus\\Documents\\GitHub\\pco-si-2025-1-dad-g5-apd\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -147,7 +147,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\mayckit\\Documents\\GitHub\\pco-si-2025-1-dad-g5-apd\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\Matheus\\Documents\\GitHub\\pco-si-2025-1-dad-g5-apd\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -155,8 +155,8 @@ const config = {
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../../../prisma",
-  "clientVersion": "6.7.0",
-  "engineVersion": "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed",
+  "clientVersion": "6.9.0",
+  "engineVersion": "81e4af48011447c3cc503a190e86995b66d2a28e",
   "datasourceNames": [
     "db"
   ],
@@ -165,12 +165,12 @@ const config = {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "postgresql://postgres:michamocha@localhost:5432/cash_control?schema=public"
+        "value": null
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Usuario {\n  id         Int         @id @default(autoincrement())\n  nome       String\n  email      String      @unique\n  senha      String\n  transacoes Transacao[] // ← Adicionado aqui\n}\n\nmodel Transacao {\n  id        Int     @id @default(autoincrement())\n  tipo      String\n  valor     Float\n  descricao String\n  usuario   Usuario @relation(fields: [usuarioId], references: [id])\n  usuarioId Int\n}\n",
-  "inlineSchemaHash": "39a2f1fa2308d490f761ba3970817cb5372e9648142e4d613e878657e3b7540b",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Usuario {\n  id         Int         @id @default(autoincrement())\n  nome       String\n  email      String      @unique\n  senha      String\n  transacoes Transacao[] // ← Adicionado aqui\n}\n\nmodel Transacao {\n  id        Int     @id @default(autoincrement())\n  tipo      String\n  valor     Float\n  descricao String\n  usuario   Usuario @relation(fields: [usuarioId], references: [id])\n  usuarioId Int\n}\n",
+  "inlineSchemaHash": "06ed420e6285834da4fbe9f5a1c15485afff0178bf69ec653422e8e23035e881",
   "copyEngine": true
 }
 config.dirname = '/'
